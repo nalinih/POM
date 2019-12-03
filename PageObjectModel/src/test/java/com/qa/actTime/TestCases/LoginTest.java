@@ -10,6 +10,7 @@ public class LoginTest {
 	public void loginToApp(){
 		driver=BrowserFactory.LaunchBrowser(driver, "Chrome", "https://ui.freecrm.com/");
 		System.out.println(driver.getTitle());
+		System.out.println();
 	}
 
 }
