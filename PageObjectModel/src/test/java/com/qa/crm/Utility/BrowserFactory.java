@@ -1,4 +1,4 @@
-package com.qa.actiTime.Utility;
+package com.qa.crm.Utility;
 
 import java.util.concurrent.TimeUnit;
 
@@ -27,11 +27,12 @@ public class BrowserFactory {
 		}else{
 			System.out.println("Browser is not supported");
 		}
+		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.get(Url);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
+		
 	return driver;
 	}
 	
